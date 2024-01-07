@@ -6,5 +6,5 @@ export interface PersonInter {
 }
 
 // 定义一个类型，类型为数组，数组中的每一项类型都为PersonInter
-export type persons = Array<PersonInter>
+export type Persons = Array<PersonInter>
 // 上述代码也可以写成这样的，export type persons = PersonInter[]

@@ -21,7 +21,7 @@
 <script lang="ts" setup name="Ts-Demo">
 // @ 表示从src目录开始搜索
 // 导入类型PersonInter
-import { type PersonInter, type persons } from '@/types'
+import { type PersonInter, type Persons } from '@/types'
 
 // 声明变量为PersonInter类型，并且赋值
 let person: PersonInter = { id: '1', name: '张三', age: 60 }
@@ -33,7 +33,7 @@ let personList: Array<PersonInter> = [
     { id: '3', name: '王五', age: 90 },
 ]
 
-let personList2: persons = [
+let personList2: Persons = [
     { id: '1', name: '张三', age: 60 },
     { id: '2', name: '李四', age: 80 },
     { id: '3', name: '王五', age: 90 },
