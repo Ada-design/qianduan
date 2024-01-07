@@ -57,7 +57,6 @@ onUnmounted(() => {
     border-radius: 10px;
     padding: 20px;
 }
-
 button {
     background-color: rgb(0, 255, 162);
     color: white;
