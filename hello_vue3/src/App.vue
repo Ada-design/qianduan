@@ -1,10 +1,9 @@
 <template>
   <!-- html -->
-  <lifecycleDemo/>
+  <HooksDemo/>
 </template>
-
 <script lang="ts" setup>
-import lifecycleDemo from '@/components/lifecycleDemo.vue'
+import HooksDemo from '@/components/HooksDemo.vue'
 </script>
 
 <style>
