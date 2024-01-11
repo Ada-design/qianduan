@@ -4,8 +4,11 @@
     <!-- 导航区 -->
     <div class="navigate">
       <!-- 路由激活时候的样式active-class -->
+      <!-- to="/" 字符串写法 -->
+      <!-- :to="{path:'/about'}" :to="{name:'news'}" 对象式写法  -->
       <RouterLink to="/" active-class="active">首页</RouterLink>
-      <RouterLink to="/about" active-class="active" >关于</RouterLink>
+      <RouterLink :to="{path:'/about'}" active-class="active" >关于</RouterLink>
+      <RouterLink :to="{name:'news'}" active-class="active" >新闻</RouterLink>
     </div>
     <!-- 展示区 -->
     <div class="main-content">
