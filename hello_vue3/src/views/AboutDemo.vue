@@ -1,9 +1,6 @@
 <template>
-    <div class="news">
-        <li><a href="#">新闻001</a></li>
-        <li><a href="#">新闻002</a></li>
-        <li><a href="#">新闻003</a></li>
-        <li><a href="#">新闻004</a></li>
+    <div class="about">
+        <h2>关于</h2>
     </div>
 </template>
 
@@ -12,17 +9,12 @@
 </script>
 
 <style scoped>
-.news {
-    padding: 0 20px;
+.about {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    margin-top: 20px;
-}
-
-.news ul li{
-    margin-top: 30px;
-    list-style: none !important;
-    display: flex;
+    color: rgb(85, 84, 84);
+    font-size: 18px;
 }
 </style>

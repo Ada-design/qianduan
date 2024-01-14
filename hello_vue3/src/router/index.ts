@@ -23,6 +23,7 @@ const router = createRouter({
             path: '/news', // 路由路径
             name: 'news', // 路由名称
             component: () => import('@/views/NewsDemo.vue'), // 路由组件
+            // 子路由
             children: [
                 {
                     path: 'detail',
