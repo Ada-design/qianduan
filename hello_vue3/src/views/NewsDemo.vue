@@ -4,13 +4,14 @@
         <div>
             <ul>
                 <li v-for="(item, index) in newsList" :key="index">
-                    <!-- 第一种query动态传参 -->
-                    <!-- 使用``,模板字符串嵌入js -->
-                    <!-- <RouterLink :to="`${item.path}?id=${item.id}&title=${item.title}&content=${item.content}`">{{ item.title  }}</RouterLink> -->
-                    <!-- 第二种query动态传参 -->
+                    <!-- 第一种写法params传参 -->
+                    <!--
+                       <RouterLink :to="`${item.path}/${item.id}/${item.title}/${item.content}`">{{ item.title  }}</RouterLink>     
+                    -->
+                    <!-- 第二种写法params传参  -->
                     <RouterLink :to="{
-                        path: item.path,
-                        query: {
+                        name: item.name,
+                        params: {
                             id: item.id,
                             title: item.title,
                             content: item.content
@@ -33,15 +34,24 @@ const newsList = reactive(
     [
         {
             id: 1,
+            name:'detail',
             title: "很好的抗癌食物",
             content: "西兰花",
             path: '/news/detail'
         },
         {
             id: 2,
+            name:'detail2',
             title: "如何一夜暴富",
             content: "新闻内容",
             path: '/news/detail2'
+        },
+        {
+            id: 3,
+            name:'detail3',
+            title: "测试",
+            content: "测试",
+            path: '/news/detail3'
         }
     ]
 )

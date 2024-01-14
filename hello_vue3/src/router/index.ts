@@ -26,12 +26,19 @@ const router = createRouter({
             // 子路由
             children: [
                 {
-                    path: 'detail',
+                    name:'detail',
+                    path: 'detail/:id/:title/:content',
                     component: () => import('@/views/news/news1-content.vue')
                 },
                 {
-                    path: 'detail2',
+                    name:'detail2',
+                    path: 'detail2/:id/:title/:content',
                     component: () => import('@/views/news/news2-content.vue')
+                },
+                {
+                    name:'detail3',
+                    path: 'detail3/:id/:title/:content',
+                    component: () => import('@/views/news/detail-content.vue')
                 }
             ]
         }

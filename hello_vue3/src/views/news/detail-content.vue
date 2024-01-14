@@ -6,9 +6,9 @@
     </ul>
 </template>
 
-<script lang="ts" setup name="news1">
-import { useRoute } from 'vue-router';
-let route = useRoute()
+<script lang="ts" setup name="detail-content">
+import { useRoute } from 'vue-router'
+const route = useRoute()
 console.log(route)
 </script>
 
