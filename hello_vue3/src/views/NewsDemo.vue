@@ -4,7 +4,18 @@
         <div>
             <ul>
                 <li v-for="(item, index) in newsList" :key="index">
-                    <RouterLink :to="item.path">{{ item.title }}</RouterLink>
+                    <!-- 第一种query动态传参 -->
+                    <!-- 使用``,模板字符串嵌入js -->
+                    <!-- <RouterLink :to="`${item.path}?id=${item.id}&title=${item.title}&content=${item.content}`">{{ item.title  }}</RouterLink> -->
+                    <!-- 第二种query动态传参 -->
+                    <RouterLink :to="{
+                        path: item.path,
+                        query: {
+                            id: item.id,
+                            title: item.title,
+                            content: item.content
+                        }
+                    }">{{ item.title }}</RouterLink>
                 </li>
             </ul>
         </div>
