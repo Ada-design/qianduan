@@ -29,6 +29,7 @@ const router = createRouter({
                     name:'detail',
                     path: 'detail/:id/:title/:content',
                     component: () => import('@/views/news/news1-content.vue'),
+                    // 第一种写法：将路由收到的所有params参数作为props传给路由组件
                     props:true
                 },
                 {
