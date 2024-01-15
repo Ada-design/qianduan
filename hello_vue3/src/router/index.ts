@@ -28,7 +28,8 @@ const router = createRouter({
                 {
                     name:'detail',
                     path: 'detail/:id/:title/:content',
-                    component: () => import('@/views/news/news1-content.vue')
+                    component: () => import('@/views/news/news1-content.vue'),
+                    props:true
                 },
                 {
                     name:'detail2',
