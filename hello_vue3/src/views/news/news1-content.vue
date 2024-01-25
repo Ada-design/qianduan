@@ -1,15 +1,15 @@
 <template>
     <ul class="news-list">
-        <li>编号:{{ id }}</li>
-        <li>标题：{{ title }}</li>
-        <li>内容：{{ content }}</li>
+        <li>编号:{{ a }}</li>
+        <li>标题：{{ b }}</li>
+        <li>内容：{{ c }}</li>
     </ul>
 </template>
 
 <script lang="ts" setup name="news1">
 import { defineProps } from 'vue'
 defineProps([
-    'id', 'title', 'content'
+    'a', 'b', 'c'
 ])
 </script>
 

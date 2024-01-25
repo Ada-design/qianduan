@@ -32,8 +32,16 @@ const router = createRouter({
                     // 第一种写法：将路由收到的所有params参数作为props传给路由组件
                     // props: true,
                     // 第二种写法：函数写法，可以自己决定将什么作为props给路由组件
-                    props(route) {
-                        return route.params
+                    // props(route) {
+                    //     return route.params
+                    // 也可以 return route.query
+                    // }
+                    // 第三种写法：对象写法，可以自己决定将什么作为props给路由组件
+                    // 不建议第三种写法，值是写死的
+                    props:{
+                        a:1,
+                        b:200,
+                        c:2
                     }
                 },
                 {
