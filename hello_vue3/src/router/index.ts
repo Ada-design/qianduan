@@ -26,19 +26,23 @@ const router = createRouter({
             // 子路由
             children: [
                 {
-                    name:'detail',
+                    name: 'detail',
                     path: 'detail/:id/:title/:content',
                     component: () => import('@/views/news/news1-content.vue'),
                     // 第一种写法：将路由收到的所有params参数作为props传给路由组件
-                    props:true
+                    // props: true,
+                    // 第二种写法：函数写法，可以自己决定将什么作为props给路由组件
+                    props(route) {
+                        return route.params
+                    }
                 },
                 {
-                    name:'detail2',
+                    name: 'detail2',
                     path: 'detail2/:id/:title/:content',
                     component: () => import('@/views/news/news2-content.vue')
                 },
                 {
-                    name:'detail3',
+                    name: 'detail3',
                     path: 'detail3/:id/:title/:content',
                     component: () => import('@/views/news/detail-content.vue')
                 }

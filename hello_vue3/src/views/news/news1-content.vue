@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup name="news1">
-import { defineProps } from 'vue';
+import { defineProps } from 'vue'
 defineProps([
     'id', 'title', 'content'
 ])
