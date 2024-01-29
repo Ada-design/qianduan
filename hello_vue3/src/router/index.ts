@@ -14,6 +14,7 @@ const router = createRouter({
             name: 'home', // 路由名称
             component: () => import('@/views/HomeDemo.vue') // 路由组件
         },
+       
         {
             path: '/about', // 路由路径
             name: 'about', // 路由名称
@@ -38,10 +39,10 @@ const router = createRouter({
                     // }
                     // 第三种写法：对象写法，可以自己决定将什么作为props给路由组件
                     // 不建议第三种写法，值是写死的
-                    props:{
-                        a:1,
-                        b:200,
-                        c:2
+                    props: {
+                        a: 1,
+                        b: 200,
+                        c: 2
                     }
                 },
                 {
@@ -55,6 +56,10 @@ const router = createRouter({
                     component: () => import('@/views/news/detail-content.vue')
                 }
             ]
+        },
+        {
+            path: '/',
+            redirect: '/news'
         }
     ]
 })
