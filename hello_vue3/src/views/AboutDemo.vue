@@ -5,7 +5,18 @@
 </template>
 
 <script lang="ts" setup name="About-Demo">
+import { onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
+
+onMounted(() => {
+    setTimeout(() => {
+        router.push({
+            path:'/news'
+        })
+    }, 2000);
+})
 </script>
 
 <style scoped>
